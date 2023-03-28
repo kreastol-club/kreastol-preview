@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Places</h1>
+<%= render 'places/form' %>
+
+<h1>Event templates</h1>
+
+<div id="event_templates">
+  <% @event_templates.each do |event_template| %>
+    <%= render event_template %>
+    <p>
+      <%= link_to "Show this event template", event_template %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New event template", new_event_template_path %>

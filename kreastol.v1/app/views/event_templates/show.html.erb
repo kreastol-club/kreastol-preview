@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @event_template %>
+
+<div>
+  <%= link_to "Edit this event template", edit_event_template_path(@event_template) %> |
+  <%= link_to "Back to event templates", event_templates_path %>
+
+  <%= button_to "Destroy this event template", @event_template, method: :delete %>
+</div>

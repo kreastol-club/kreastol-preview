@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kreastol2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body>
+<style>
+    :root {
+        --base: <%= @color %>;
+        --color-1: <%= @hex_m1 %>;
+        --color-2: <%= @hex_m2 %>;
+        --color-3: <%= @hex_m3 %>;
+        --color-4: <%= @hex_m4 %>;
+
+        --comp-1: <%= @hex_c1 %>;
+        --comp-1-m1: <%= @hex_c1_m1 %>;
+        --comp-1-m2: <%= @hex_c1_m2 %>;
+
+        --comp-2: <%= @hex_c2 %>;
+        --comp-2-m1: <%= @hex_c2_m1 %>;
+        --comp-2-m2: <%= @hex_c2_m2 %>;
+
+    }
+</style>
+<header>
+  <%= render 'layouts/nav' %>
+</header>
+
+<%= yield %>
+</body>
+</html>

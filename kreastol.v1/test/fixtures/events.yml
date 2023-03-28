@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_at: 2023-02-05 12:53:49
+  event_template: one
+  project: one
+
+two:
+  start_at: 2023-02-05 12:53:49
+  event_template: two
+  project: two

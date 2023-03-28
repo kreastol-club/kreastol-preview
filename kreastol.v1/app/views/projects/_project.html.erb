@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class="centered"><%= project.name %></h1>
+
+  <% if project.thumbnail.attached? %>
+    <img class="main" src="<%= url_for(project.thumbnail) %>">
+  <% end %>
+  <% if @events_not_happened == false %>
+    <%= project.body %>
+  <% end %>
+
+  <h3>Projectet tartalmazó események</h3>
+  <ul>
+    <% @events.each do |event| %>
+      <li><%= link_to event.event_template.name, event_path(event.id) %></li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,28 @@
+<div class="events">
+  <% @events.each do |event| %>
+    <%
+      @start_time = (event.start_at).strftime("%Y.%m.%d. %H:%M")
+      @end_time = event.start_at + event.event_template.hour.hours + event.event_template.minute.minutes
+      @end_time_str = @end_time.strftime("%H:%M")
+    %>
+    <% if @end_time >= DateTime.current %>
+      <div class="event-list-item">
+        <div class="bg"></div>
+        <div class="event-thumbnail">
+          <% if event.project.thumbnail.attached? %>
+            <img src="<%= url_for(event.project.thumbnail) %>">
+          <% end %>
+          <p class="subtitle "><%= event.project.name %></p>
+        </div>
+        <div class="event-title">
+          <p class="title"><%= event.event_template.name %></p>
+          <p class="sub subtitle"><%= event.event_template.place.city %>: <%= @start_time %> - <%= @end_time_str %></p>
+        </div>
+        <%= link_to "Megyünk!", event, class: "btn" %>
+        <div class="content">
+          <p><%= event.event_template.youngest %> évestől <%= event.event_template.oldest %> éves korig</p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

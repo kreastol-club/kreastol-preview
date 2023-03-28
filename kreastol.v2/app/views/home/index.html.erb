@@ -1,0 +1,24 @@
+<div class="upcoming-events">
+  <h1 class="title">Upcoming events</h1>
+  <div class="events snap">
+      <% (1..5).each { |a| %>
+
+        <div class="event-list-item">
+          <div class="bg"></div>
+          <div class="event-thumbnail">
+              <%= image_tag 'dummy.jpg' %>
+            <p class="subtitle ">Subtitle <%= a %></p>
+          </div>
+          <div class="event-title">
+            <p class="title">Title <%= a %></p>
+            <p class="sub subtitle">City: <%= a %>: 17:30 - 19:00</p>
+          </div>
+          <a href="#" class="btn">Megyünk!</a>
+          <div class="content">
+            <p>4 évestől 6 éves korig</p>
+          </div>
+        </div>
+
+      <%  } %>
+  </div>
+</div>

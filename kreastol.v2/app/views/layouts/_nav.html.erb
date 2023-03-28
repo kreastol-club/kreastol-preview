@@ -1,0 +1,13 @@
+<div class="nav">
+  <%= link_to "Kreastol", home_index_path, class: "title" %>
+  <%= form_with url: home_set_session_path, method: :post do |form| %>
+    <%=
+      if session[:theme]
+        form.color_field :favorite_color, value: session[:theme]
+      else
+        form.color_field :favorite_color, value: "#FFFFFF"
+      end
+    %>
+    <%= form.submit "Select" %>
+  <% end %>
+</div>

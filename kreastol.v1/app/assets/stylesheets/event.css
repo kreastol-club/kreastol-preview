@@ -1,0 +1,9 @@
+.event{
+    color: var(--primary);
+}
+
+.parent{
+    margin: 1rem;
+    border: #730E15 solid 1px;
+    padding: .5rem;
+}
